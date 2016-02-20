@@ -1,14 +1,26 @@
 <head>
-  <title>Lo-cat-ec</title>
+  <title>Locatec</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <h1>Bienvenido a Locatec, ¿Se te perdió Algo?</h1>
+  {{> loginButtons}}
+ {{> hello}}
+  {{> Login}}
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="Login">
+    
+        <form>
+           <p> Username: <input type="text" name="Username"> </p>
+           <p> Password: <input type="text" name="Password"> </p>
+          <p> Email:     <input type="text" name="email"> </p>
+          <p>  <input type="submit" value="Login"> </p>
+        </form>
+    
 </template>
