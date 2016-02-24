@@ -1,14 +1,198 @@
 <head>
-  <title>Lo-cat-ec</title>
+  <title> FindIT </title>
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name = "ApplicationLayout">
+  {{> yield "aux"}}
+  {{> yield "main"}}
+</template>
+<template name = "login">
+  <h1> FindIT </h1>
+  <div class = "header">
+    <ul>
+      <li> <img class = "fototec" src = "/tec.png"> </li>
+    </ul>
+  </div>
+  <div class = "form">
+    <form>
+      <p> <input class = "field" type = "text" name = "username" placeholder = "username"> </p>
+      <p> <input class = "field" type = "password" name = "password" placeholder = "password"> </p>
+      <p> <input class = "button" type = "submit" value = "Log in"> </p>
+    </form>
+  </div>
+  <p class= "member"> Todavía no eres miembro? <a href = "/register"> Regístrate aquí </a></p>
+  <img class = "foto" src = "/foto.jpg">
+</template>
+<template name = "register">
+  <h1> FindIT </h1>
+  <div class = "header">
+    <ul>
+      <li> <img class = "fototec" src = "/tec.png"> </li>
+    </ul>
+  </div>
+  <div class = "form1">
+    <form>
+      <p> <input class = "field" type = "text" name = "username" placeholder = "username"> </p>
+      <p> <input class = "field" type = "password" name = "password" placeholder = "password"> </p>
+      <p> <input class = "field" type = "text" name = "email" placeholder = "email"> </p>
+      <p> <input class = "button" type = "submit" value = "Register"> </p>
+    </form>
+  </div>
+  <img class = "foto" src = "/foto.jpg">
+</template>
+<template name="ropa">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+    <img class = "fotoart" src = "/ce.jpg">
+  </div>
+  <form class = "objeto">
+  <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿En d&oacute;nde lo perdiste?"></p>
+   <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Cu&aacute;ndo lo perdiste?"> </p>
+   <p> <input class = "caja" type="text" name="colorz" placeholder="¿De qu&eacute; color es la prenda?">  </p>
+   <p> <input class = "caja" type="text" name="talla" placeholder="¿De qu&eacute; talla es la prenda?">  </p>
+   <p> <input class = "caja" type="text" name="caract" placeholder="¿Tiene alguna caracteristica especial?">  </p>
+   <p>  <input class = "boton" type="submit" value="Reportar"> </p>
+ </form>
+</template>
+<template name="dispEl">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+  <img class = "fotoart" src = "/ce.jpg">
+</div>
+<form class = "objeto">
+  <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Hora?"> </p>
+  <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿Ubicaci&oacute;n?"> </p>
+  <p> <input class = "caja" type="text" name="tipo" placeholder="¿Qu&eacute; tipo de dispositivo es? (mouse, teclado, laptop, etc...)"> </p>
+  <p> <input class = "caja" type="text" name="marca" placeholder="¿De qu&eacute; marca es?"> </p>
+  <p>   <input class = "caja" type="text" name="modelo" placeholder="¿Qu&eacute; modelo es?">  </p>
+  <p> <input class = "caja" type="text" name="colorz" placeholder="¿De qu&eacute; color es?">  </p>
+  <p> <input class = "caja" type="text" name="caract" placeholder="¿Tiene alguna característica especial?">  </p>
+  <p>  <input class = "boton" type="submit" value="Reportar"> </p>
+</form>
+</template>
+<template name="dispEsc">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+  <img class = "fotoart" src = "/ce.jpg">
+</div>
+<form class = "objeto">
+ <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Hora?"> </p>
+ <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿Ubicaci&oacute;n?"> </p>
+ <p> <input class = "caja" type="text" name="tipo" placeholder="¿Qu&eacute; artículo es? (libreta, pluma, carpeta, etc)"> </p>
+ <p>   <input class = "caja" type="text" name="colorz" placeholder="¿De qu&eacute; color es?">  </p>
+ <p> <input class = "caja" type="text" name="caract" placeholder="¿Tiene alguna característica especial?">  </p>
+ <p>  <input class = "boton" type="submit" value="Reportar"> </p>
+</form>
+</template>
+<template name="Aropa">
+  <form class = "objeto">
+    <link rel="stylesheet" type="text/css" href="Lo-cat-ec.css">
+    <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿Ubicacion?"> </p>
+    <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Hora?"> </p>
+    <p>   <input class = "caja" type="text" name="colorz" placeholder="De que color es la prenda?">  </p>
+    <p> <input class = "caja" type="text" name="talla" placeholder="De que talla es la prenda?">  </p>
+    <p> <input class = "caja" type="text" name="caract" placeholder="Tiene alguna caracteristica especial?">  </p>
+    <p> <input class = "caja" type="text" name="num" placeholder="Que numero es?" >  </p>
+    <p>  <input class = "boton" type="submit" value="Reportar">
+     <a href="/admin"><button class = "back" type = "button"> Atrás </button></a></p>
+  </form>
+</template>
+<template name="AdispEl">
+  <form class = "objeto">
+    <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿Ubicacion?"> </p>
+    <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Hora?"> </p>
+    <p> <input class = "caja" type="text" name="tipo" placeholder="¿Que tipo de dispositivo es? (mouse, teclado, laptop, etc)"> </p>
+    <p> <input class = "caja" type="text" name="marca" placeholder="¿De que marca es?"> </p>
+    <p>   <input class = "caja" type="text" name="modelo" placeholder="¿Que modelo es?">  </p>
+    <p> <input class = "caja" type="text" name="colorz" placeholder="¿De que color es?">  </p>
+    <p> <input class = "caja" type="text" name="caract" placeholder="¿Tiene alguna característica especial?">  </p>
+    <p> <input class = "caja" type="text" name="num" placeholder="Que numero es?" >  </p>
+    <p>  <input class = "boton" type="submit" value="Reportar">
+     <a href="/admin"><button class = "back" type = "button"> Atrás </button></a></p>
+  </form>
+</template>
+<template name="AdispEsc">
+  <form class = "objeto">
+    <p> <input class = "caja" type="text" name="ubicacion" placeholder="¿Ubicacion?"> </p>
+    <p> <input class = "caja" type="datetime-local" name="hora" placeholder="¿Hora?"> </p>
+    <p> <input class = "caja" type="text" name="tipo" placeholder="¿Que artículo es? (libreta, pluma, carpeta, etc)"> </p>
+    <p>   <input class = "caja" type="text" name="colorz" placeholder="¿De que color es?">  </p>
+    <p> <input class = "caja" type="text" name="caract" placeholder="¿Tiene alguna característica especial?">  </p>
+    <p> <input class = "caja" type="text" name="num" placeholder="Que numero es?" >  </p>
+    <p>  <input class = "boton" type="submit" value="Reportar">
+     <a href="/admin"><button class = "back" type = "button"> Atrás </button></a></p>
+  </form>
+</template>
+<template name = "tipos">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+  <img class = "fotoart" src = "/ce.jpg">
+</div>
+  <div class = "articulo">
+    Tipo de objeto perdido: <select id = "objetos">
+    <option value="Ropa">Ropa</option>
+    <option value="DispEl">Dispositivo Electronico</option>
+    <option value="DispEsc">Articulos escolares</option>
+  </select>
+  <button class = "boton"> Siguiente </button>
+</div>
+</template>
+<template name = "admin">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+  </div>
+  <img class = "fotoarta" src = "/fotos.jpg">
+  <div>
+    <div class = "cuadro1" > <a href="/tipos">Registrar un <br> artículo</a> </div>
+  <div class = "cuadro1"> <a href="/ALista">Lista de <br> artículo</a> </div>
+  </div>
+</template>
+<template name="itemsRopa">
+  <div class = "header">
+    <div class="fototec">
+      <img class = "fototec" src = "/tec.png">
+    </div>
+    <div class="sign">
+      <a href = "/" > Sign Out </a>
+    </div>
+  </div>
+  <img class = "fotoarta2" src = "/fotos.jpg">
+  {{#each Matches}}
+    <h3>Reporte: {{arr.[1]}}</h3>
+    <h2>Posible dueno: {{arr.[0]}}</h2>
+    <p>Articulo: {{articulo}}</p>
+    <p>Ubicacion: {{ubicacion}}</p>
+    <p>Color: {{colors}}</p>
+    <p>Espec: {{espec}}</p>
+    <p>Especial: {{especial}}</p>
+    <button> Objeto entregado </button>
+  {{/each}}
+<button class = "mail" type="button">Manda Mail!</button>
 </template>

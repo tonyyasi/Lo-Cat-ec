@@ -1,1 +1,199 @@
 /* CSS declarations go here */
+body{
+margin: 0px;
+padding: 0px;
+}
+.header{
+   width: 100%;
+   height: 70px;
+   background-color: #000c3e;
+   z-index: 10;
+   position: fixed;
+   padding-top: 10px;
+   box-sizing: border-box;
+   margin-bottom: 0px;
+   display: inline;
+}
+a{
+   transition-property: text-decoration;
+   transition-duration: 5000ms;
+}
+a:link{
+   text-decoration: none;
+}
+a:visited{
+   color: purple;
+}
+a:hover{
+   text-decoration: underline;
+}
+div ul li{
+   display: inline;
+}
+.sign {
+   text-align: right;
+   margin-top: -30px;
+   margin-right: 20px;
+}
+.fototec{
+   height: 40px;
+   display: inline;
+   margin-left: 20px;
+}
+h1{
+   z-index: 20;
+   position: absolute;
+   top: 150px;
+   left: 490px;
+   font-size: 60px;
+   font-family: 'Arvo', sans-serif;
+   color: #000c3e;
+   letter-spacing: 40px;
+   font-style: bold;
+}
+.member{
+   z-index: 10;
+   position: absolute;
+   margin-left: 530px;
+   margin-top: 450px;
+   font-family: 'Arvo', sans-serif;
+   font-style: italic;
+}
+.form {
+   box-sizing: border-box;
+   position: absolute;
+   z-index: 10;
+   text-align: center;
+   margin-top: 120px;
+   margin-left: 450px;
+   background-color: rgba(255,255,255,0.8);
+   padding: 170px;
+}
+.form1 {
+   box-sizing: border-box;
+   position: absolute;
+   z-index: 10;
+   text-align: center;
+   margin-top: 100px;
+   margin-left: 400px;
+   background-color: rgba(255,255,255,0.8);
+   padding: 170px;
+}
+.field{
+   text-align: center;
+   padding: 5px;
+   border-radius: 5px;
+   width: 150px;
+}
+.button{
+   text-align: center;
+   padding: 5px;
+   border-radius: 5px;
+   width: 100px;
+}
+.foto{
+   position: fixed;
+   height: 100;
+   width: 100%;
+   opacity: 0.5;
+}
+.objeto{
+   box-sizing: border-box;
+   position: absolute;
+   text-align: center;
+   margin-top: 300px;
+   margin-left: 350px;
+   box-sizing: border-box;
+   z-index: 1;
+
+}
+.articulo{
+   position: absolute;
+   text-align: center;
+   margin-top: 290px;
+   margin-left: 400px;
+}
+.caja{
+   width: 500px;
+   padding: 5px;
+   border-radius: 5%;
+}
+.boton{
+   display: inline-block;
+   text-align: center;
+   padding: 1px;
+   border-radius: 5px;
+   width: 100px;
+   color: black;
+   background-color: white;
+}
+.back{
+   display: inline-block;
+   text-align: center;
+   padding: 1px;
+   border-radius: 5px;
+   width: 100px;
+   color: black;
+   background-color: white;
+}
+.fotoart{
+   position: fixed;
+   width: 100%;
+   height: 200px;
+   top: 70px;
+   opacity: 0.5;
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+}
+.fotoarta{
+   position: fixed;
+   width: 100%;
+   height: 350px;
+   top: 70px;
+   opacity: 0.5;
+}
+.fotoarta2{
+   position: fixed;
+   width: 100%;
+   height: 550px;
+   top: 70px;
+   opacity: 0.5;
+}
+.cuadros{
+   width: 450px;
+}
+.cuadro1 {
+margin-top: 490px;
+width: 250px;
+float: left;
+border: 1px
+background: blue;
+background-color: #000c3e;
+padding: 25px;
+text-align: center;
+color: white;
+margin-right: 170px;
+margin-left: 170px;
+}
+.cuadro1 > a:link{
+   text-decoration: none;
+   color: white;
+}
+.table{
+    box-sizing: border-box;
+   position: absolute;
+   margin-top: 150px;
+   margin-left: 450px;
+   box-sizing: border-box;
+   z-index: 1;
+   padding: 100px;
+   font-size: 20px;
+}
+.mail{
+   margin-top: 640px;
+   margin-left: 400px;
+}
+.mail2{
+   margin-top: 640px;
+   margin-left: 400px;
+}
